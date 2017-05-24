@@ -49,6 +49,14 @@
 	for ( i = 0, len = links.length; i < len; i++ ) {
 		links[i].addEventListener( 'focus', toggleFocus, true );
 		links[i].addEventListener( 'blur', toggleFocus, true );
+		
+
+//changes the href from linking to another page to an anchor link within the same page.
+
+//splits the href attr to get the id of the page
+		var thisThing = jQuery(links[i]).attr('href').split("id=")[1]
+		jQuery(links[i]).attr('href', "#"+thisThing)
+
 	}
 
 	/**

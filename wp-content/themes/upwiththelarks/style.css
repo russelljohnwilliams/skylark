@@ -625,7 +625,7 @@ a:active {
 .site-main .comment-navigation,
 .site-main .posts-navigation,
 .site-main .post-navigation {
-	margin: 0 0 1.5em;
+	margin: 0;
 	overflow: hidden;
 }
 
@@ -933,7 +933,7 @@ object {
 }
 
 .entry-header{
-	/*position: absolute;*/
+	position: absolute;
 	z-index: 10;
 }
 
@@ -973,9 +973,8 @@ p.cloned-event{
 #page-wrapper{
 	/*margin-bottom: -6px;*/
 	width: 6000px;
-	height: 500px;
-	background: lightblue;
-	/*overflow: none;*/
+		/*background: lightblue;*/
+	overflow: auto;
 }
 
 .post-wrapper{
@@ -992,6 +991,11 @@ p.cloned-event{
 	margin: 0;
 	font-size: small;
 	color: black;
+	/*position: relative;*/
+}
+
+.post{
+	position: relative;	
 }
 
 
@@ -1000,6 +1004,10 @@ p.cloned-event{
 	width: 99%;
 	height: 520px;
 	overflow: auto;
+	position: absolute;
+	left: 200px;
+	right: 200px;
+	width: calc(100% - 400px);
 }
 
 .page-builder{
@@ -1008,6 +1016,19 @@ p.cloned-event{
 	/*display: inline-block;*/
 	width: 980px;
 	height: 480px;
-	border: 1px solid black;
-	margin: 5px;
+	border: 5px solid purple;
+	/*margin: 5px;*/
+}
+
+.menu {
+    text-align:center
+}
+.menu li {
+    display:inline-block;
+    float:none;
+    margin: 5px;
+}
+.menu li li {
+    display:block;
+    text-align:left
 }
