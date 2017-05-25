@@ -929,7 +929,7 @@ object {
 .entry-title, .entry-content{
 	margin: 0;
 	color: white;
-	overflow: auto;
+	overflow: hidden;
 }
 
 .entry-header{
@@ -938,18 +938,20 @@ object {
 }
 
 .entry-content p, .cff-wrapper, .cloned-opening-hours{
-	padding: 35px 10px 0 10px;
+	/*padding: 35px 10px 0 10px;*/
+	overflow: hidden;
 }
 
 p{
 	margin: 0;
+	padding: 0;
 	color: black;
 }
 
 .scrollable{
-	overflow: auto;
-	padding-right: 5px;
-	padding-left: 5px;
+	overflow-y: scroll;
+	/*padding-right: 5px;*/
+	/*padding-left: 5px;*/
 	text-align: justify;
 }
 
@@ -1000,10 +1002,10 @@ p.cloned-event{
 
 
 #viewport{
-	border: 4px dashed red;
+	border: 4px solid grey;
 	width: 99%;
 	height: 520px;
-	overflow: auto;
+	overflow: hidden;
 	position: absolute;
 	left: 200px;
 	right: 200px;
@@ -1016,7 +1018,7 @@ p.cloned-event{
 	/*display: inline-block;*/
 	width: 980px;
 	height: 480px;
-	border: 5px solid purple;
+	border: 5px solid white;
 	/*margin: 5px;*/
 }
 
@@ -1032,3 +1034,20 @@ p.cloned-event{
     display:block;
     text-align:left
 }
+
+.background-image{
+	position: absolute;
+	overflow: hidden;
+}
+
+.post-text{
+	padding: 35px 10px 0 10px;
+	color: black;
+	z-index: 10;
+	position: relative;
+}
+
+.post-wrapper{
+	overflow: hidden;
+}
+
