@@ -1,5 +1,5 @@
   var screenWidth = jQuery(window).width()
-      var currentPosition = 0
+  var currentPosition = 0
 
 
   jQuery( document ).ready(function() {
@@ -20,56 +20,20 @@
       var viewportPosition = jQuery('#viewport').offset().left;
       var anchor = jQuery(this);
       var targetAnchor = jQuery(anchor.attr('href')).offset().left
-      var pageWidth = jQuery(".page-builder").width()+10
-      var sumTotal = targetAnchor - viewportPosition - 4
+      var targetAnchorSum = targetAnchor - viewportPosition - 4
 
-      console.log("anchor!", targetAnchor)
-      console.log("sum", sumTotal)
-      console.log("page width", pageWidth)
-      
-      if( jQuery('.home-page').offset().left == viewportPosition + 4 ){
-
-        if(targetAnchor != viewportPosition + 4){
-          jQuery('#viewport').stop().animate({
-            scrollLeft: (sumTotal)
-          }, 1000);
-          currentPosition += sumTotal
-          console.log("currentPosition", currentPosition)
-        }
-      }else{
-          if(targetAnchor != viewportPosition + 4){
-            jQuery('#viewport').stop().animate({
-              scrollLeft: (sumTotal + currentPosition)
-            }, 1000);
-            console.log("currentPosition", currentPosition)
-          }
-        }
-
+      console.log("targetAnchor", targetAnchorSum)
+      if(targetAnchor != viewportPosition + 4){
+        var moveTo = targetAnchorSum + currentPosition
+        jQuery('#viewport').stop().animate({
+          scrollLeft: (moveTo)
+        }, 1000);
+        currentPosition = moveTo
+        console.log("currentPosition", currentPosition)
+      }
       event.preventDefault();
     });
   });
-
-
-
-
-
-
-  // if(targetAnchor != viewportPosition){
-  //   jQuery('#page-wrapper').stop().css({
-  //     'transition': 'transform 1s',
-  //     'transform': 'translatex( -' + sumTotal +'px )'
-  //   });
-  // }
-
-
-
-
-
-
-
-
-
-
 
 
   function getInstagramImage(){
@@ -156,3 +120,36 @@
 // }
 //create same number of pages as there are "page-builder" divs
 // clone content of "page-builder" divs into each new page inside the "page-wrapper" div inside "viewport" div. 
+
+
+
+
+
+
+
+
+
+
+//     // if( jQuery('.home-page').offset().left == viewportPosition + 4 && targetAnchor != viewportPosition + 4 ){
+
+//     //   // if(targetAnchor != viewportPosition + 4){
+//     //     jQuery('#viewport').stop().animate({
+//     //       scrollLeft: (targetAnchorSum)
+//     //     }, 1000);
+//     //     currentPosition += targetAnchorSum
+//     //     console.log("currentPosition", currentPosition)
+//       // }
+//     // }else{
+//         if(targetAnchor != viewportPosition + 4){
+//           var moveTo = targetAnchorSum + currentPosition
+//           jQuery('#viewport').stop().animate({
+//             scrollLeft: (moveTo)
+//           }, 1000);
+//           currentPosition = moveTo
+//           console.log("currentPosition", currentPosition)
+//         }
+//       // }
+
+//     event.preventDefault();
+//   });
+// });
