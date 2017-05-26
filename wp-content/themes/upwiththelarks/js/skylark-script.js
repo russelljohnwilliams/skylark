@@ -13,8 +13,22 @@
   });
 })
 
+  jQuery(function(){
+    jQuery('.site-title').bind('click', function(event){
+
+        jQuery('#viewport').stop().animate({
+          scrollLeft: (0)
+        }, 1000);
+        currentPosition = 0
+        console.log("currentPosition", currentPosition)
+      
+      event.preventDefault();
+
+    });
+  });
+
   jQuery(function() {
-    
+
     jQuery('ul>li>a').bind('click',function(event){
 
       var viewportPosition = jQuery('#viewport').offset().left;
@@ -55,8 +69,11 @@
   function buildPages(){
     var newPosts = jQuery('.page-builder').eq(0)
     jQuery("#main").clone().removeAttr('id').attr('id', "new-main").appendTo(newPosts)
-    var cw = jQuery('.post').width();
-    jQuery('.post').css({'height':cw+'px'});
+    var width = jQuery('#viewport').width();
+    jQuery('#viewport').height(width)
+    jQuery('.post-wrapper').css("width", (width - 10) / 3 )
+    var cw = jQuery('.post-wrapper').width();
+    jQuery('.post-wrapper').css({'height':cw+'px'});
 
     var viewportWidth = jQuery('#viewport').width()
     jQuery('.page-builder').css('width', (viewportWidth) +'px')

@@ -949,9 +949,9 @@ p{
 }
 
 .scrollable{
-	overflow-y: scroll;
-	/*padding-right: 5px;*/
-	/*padding-left: 5px;*/
+	overflow: auto;
+	padding-right: 5px;
+	padding-left: 5px;
 	text-align: justify;
 }
 
@@ -1010,6 +1010,7 @@ p.cloned-event{
 	left: 200px;
 	right: 200px;
 	width: calc(100% - 400px);
+	margin-bottom: 50px;
 }
 
 .page-builder{
@@ -1050,4 +1051,6 @@ p.cloned-event{
 .post-wrapper{
 	overflow: hidden;
 }
+
+
 
