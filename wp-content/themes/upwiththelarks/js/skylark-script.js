@@ -6,6 +6,7 @@
     cloneEvent()
     buildPages()
     getInstagramImage()
+    colours()
   // setViewportWidth()
   jQuery(window).on("resize", function(event){
     jQuery('#new-main').remove();
@@ -84,89 +85,12 @@
     jQuery('.page-builder').css('height', (viewportHeight) +'px')
   }
 
+  function colours(){
+    var colour = ['pink', 'orange', 'grey', 'yellow', 'blue', 'white', 'green', 'purple']
 
-// page wrapper width = .eq() of last page x width of page builder
+    for (var i = 0; i < 9; i++){
+      var x = Math.floor((Math.random() * 9) + 1);
+      jQuery('.entry-content').eq(8+i).css('background', colour[x])
+    }
+  }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-// jQuery(function() {
-//   jQuery('ul>li>a').bind('click',function(event){
-
-// var the_id = jQuery(this).attr("href");
-
-//     jQuery('#page-wrapper').animate({
-//         scrollLeft:jQuery(the_id).offset().left
-//     }, 'slow');
-
-// return false;});
-// })
-
-
-
-
-
-
-
-
-
-// function setViewportWidth(){
-//   console.log("screenWidth", screenWidth)
-//   console.log("viewportWidth", viewportWidth)
-//   console.log("gutter", gutter  )
-//   jQuery('#viewport').css({"margin-left": gutter, "width" : viewportWidth})
-//   buildPages()
-// }
-
-
-
-// for (var i=0; i < 8; i++){
-//   var posts = jQuery('.page-builder').eq(i)
-//   console.log("posts", newPosts)
-//   jQuery(".post-wrapper").clone().appendTo(posts)
-// }
-//create same number of pages as there are "page-builder" divs
-// clone content of "page-builder" divs into each new page inside the "page-wrapper" div inside "viewport" div. 
-
-
-
-
-
-
-
-
-
-
-//     // if( jQuery('.home-page').offset().left == viewportPosition + 4 && targetAnchor != viewportPosition + 4 ){
-
-//     //   // if(targetAnchor != viewportPosition + 4){
-//     //     jQuery('#viewport').stop().animate({
-//     //       scrollLeft: (targetAnchorSum)
-//     //     }, 1000);
-//     //     currentPosition += targetAnchorSum
-//     //     console.log("currentPosition", currentPosition)
-//       // }
-//     // }else{
-//         if(targetAnchor != viewportPosition + 4){
-//           var moveTo = targetAnchorSum + currentPosition
-//           jQuery('#viewport').stop().animate({
-//             scrollLeft: (moveTo)
-//           }, 1000);
-//           currentPosition = moveTo
-//           console.log("currentPosition", currentPosition)
-//         }
-//       // }
-
-//     event.preventDefault();
-//   });
-// });
