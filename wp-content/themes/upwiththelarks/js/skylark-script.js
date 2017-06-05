@@ -109,22 +109,22 @@ function cloneEvent(){
 
 function buildPages(){
 
-  var newPosts = jQuery('.page-builder').eq(0)
-  var viewportWidth = jQuery('#viewport').width()
-  var viewportHeight = jQuery('#viewport').height()
-  
-  var cw = jQuery('.post-wrapper')
-  .css("width", (viewportWidth - 10) / 3 )
-  .width();
-
   jQuery("#main")
   .clone()
   .removeAttr('id')
   .attr('id', "new-main")
   .appendTo(newPosts)
 
+  var newPosts = jQuery('.page-builder').eq(0)
+  var viewportWidth = jQuery('#viewport').width()
+  
+  var cw = jQuery('.post-wrapper')
+  .css("width", (viewportWidth - 10) / 3 )
+  .width();
+
   jQuery('#viewport').height(viewportWidth)
-  // jQuery('.post-wrapper').css("width", (width - 10) / 3 )
+  var viewportHeight = jQuery('#viewport').height()
+
   jQuery('.post-wrapper').css({'height':cw+'px'});
   jQuery('.page-builder').css('width', (viewportWidth) +'px')
   jQuery('.page-wrapper').css('height', (viewportHeight) +'px')
@@ -141,6 +141,8 @@ function colours(){
       jQuery('.entry-content').eq(9+i).css('background', colour[i])
     }
   }
+
+
 
 
   // function colours(){
