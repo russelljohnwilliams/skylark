@@ -109,18 +109,18 @@ function cloneEvent(){
 
 function buildPages(){
 
+  var newPosts = jQuery('.page-builder').eq(0)
+  var viewportWidth = jQuery('#viewport').width()
+  var cw = jQuery('.post-wrapper')
+  .css("width", (viewportWidth - 10) / 3 )
+  .width();
+
+
   jQuery("#main")
   .clone()
   .removeAttr('id')
   .attr('id', "new-main")
   .appendTo(newPosts)
-
-  var newPosts = jQuery('.page-builder').eq(0)
-  var viewportWidth = jQuery('#viewport').width()
-  
-  var cw = jQuery('.post-wrapper')
-  .css("width", (viewportWidth - 10) / 3 )
-  .width();
 
   jQuery('#viewport').height(viewportWidth)
   var viewportHeight = jQuery('#viewport').height()
