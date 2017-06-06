@@ -7,6 +7,7 @@
    buildPages()
    getInstagramImage()
    colours()
+   addHomeToMenu()
  })
 
 
@@ -19,6 +20,11 @@ jQuery(function(){
     colours()
   });
 })
+
+function addHomeToMenu(){
+  jQuery('.home-page').attr('id', "home")
+  jQuery('.nav-menu').prepend('  <li class="homePag"><a href="#home">home | maison</a></li>')
+}
 
 
 // function to scroll the viewport back to the first page (the post tiles)
@@ -40,9 +46,9 @@ jQuery(function(){
       var viewportPosition = jQuery('#viewport').offset().left;
       var anchor = jQuery(this);
       var targetAnchor = jQuery(anchor.attr('href')).offset().left
-      var targetAnchorSum = targetAnchor - viewportPosition - 4
-
-      if(targetAnchor != viewportPosition + 4){
+      var targetAnchorSum = targetAnchor - viewportPosition 
+      console.log("anchor", targetAnchor)
+      // if(targetAnchor != viewportPosition + 4){
         var moveTo = targetAnchorSum + currentPosition
         jQuery('#viewport')
         .stop()
@@ -50,10 +56,13 @@ jQuery(function(){
           scrollLeft: (moveTo)
         }, 1000);
         currentPosition = moveTo
-      }
+      // }
       event.preventDefault();
     });
   });
+
+
+
 
 // takes the (hidden with css) tagline, generated within wordpress, splits at an asterix and separates onto new lines to create a multiple line tagline
 
@@ -105,6 +114,8 @@ function cloneEvent(){
   eventContent.clone()
   .appendTo(clonedEvent)
 }
+
+
 
 
 function buildPages(){

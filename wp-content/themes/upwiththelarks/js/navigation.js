@@ -56,7 +56,6 @@
 //splits the href attr to get the id of the page
 		var thisThing = jQuery(links[i]).attr('href').split("id=")[1]
 		jQuery(links[i]).attr('href', "#"+thisThing)
-
 	}
 
 	/**

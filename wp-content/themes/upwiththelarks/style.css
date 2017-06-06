@@ -1011,9 +1011,9 @@ p.cloned-event{
 	height: 520px;
 	overflow: hidden;
 	position: absolute;
-	left: 15%;
-	right: 15%;
-	width: calc(100% - 30%);
+	left: 20%;
+	right: 20%;
+	width: calc(100% - 40%);
 	margin-bottom: 50px;
 }
 
