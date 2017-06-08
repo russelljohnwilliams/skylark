@@ -893,7 +893,17 @@ object {
 }
 
 .site-header{
-	padding: 10px 30px 0 30px;
+	padding: 5px 30px 0 30px;
+}
+
+.split-tagline{
+	height: 100%;
+	border: 1px solid grey;	
+
+}
+
+.split-tagline p{
+	
 }
 
 .skylark-header-image{
@@ -1043,18 +1053,23 @@ p.cloned-event{
 .background-hide{
 	position: absolute;
 	overflow: hidden;
-	display: none;
+	/*display: none;*/
 }
 
-.background-image{
+/*.background-image{
 	height: 100%;
 	width: 100%;
 }
 
 .background-image:hover .background-hide{
 	display: initial;
-}
+}*/
 
+.background-image{
+	height: 100%;
+	width: 100%;
+	/*display: none;*/
+}
 
 /*p {
     display: none;

@@ -8,6 +8,7 @@
    getInstagramImage()
    colours()
    addHomeToMenu()
+   
  })
 
 
@@ -61,6 +62,35 @@ jQuery(function(){
     });
   });
 
+  jQuery(function(){
+    jQuery('.background-hide').hide();
+
+    jQuery('.background-image').hover(
+      function(){
+        jQuery(this).children('.background-hide').stop(true, true).fadeIn()
+      },
+      function(){
+        jQuery(this).children('.background-hide').stop(true, true).fadeOut()
+      });
+  });
+
+
+
+  // jQuery(function(){
+  //   jQuery('.background-image').mouseenter(
+  //     function(){
+  //       jQuery(this).children('.background-hide').stop(true, true).fadeOut()
+  //     });
+  // });
+
+
+  // jQuery(function(){
+  //   jQuery('.background-image').mouseleave(
+      
+  //     function(){
+  //       jQuery(this).children('.background-hide').stop(true, true).fadeIn()
+  //     });
+  // });
 
 
 
