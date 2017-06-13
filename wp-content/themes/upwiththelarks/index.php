@@ -24,7 +24,7 @@ get_header(); ?>
 		<header>
 			<h1 class="page-title screen-reader-text">
 
-				<?php single_post_title(); ?>
+				// <?php single_post_title(); ?>
 			
 			</h1>
 		</header>
@@ -67,7 +67,7 @@ get_header(); ?>
 						
 						>
 
-							<a class="page-title"> <?php the_title(); ?></a>
+							
 
 							<?php the_content(); ?>
 			

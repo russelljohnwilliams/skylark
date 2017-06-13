@@ -17,8 +17,11 @@
 jQuery(function(){
   jQuery(window).on("resize", function(event){
     jQuery('#new-main').remove();
+    // jQuery('.page-builder').remove();
+
     buildPages();
     colours()
+
   });
 })
 
@@ -74,6 +77,12 @@ jQuery(function(){
       });
   });
 
+jQuery(function(){
+  var menu = jQuery('.kix-paginateddocumentplugin')
+  console.log("menu", menu)
+  menu.clone().appendTo('.food-clone')
+
+})
 
 
   // jQuery(function(){
@@ -166,7 +175,7 @@ function buildPages(){
   jQuery('#viewport').height(viewportWidth)
   var viewportHeight = jQuery('#viewport').height()
 
-  jQuery('.post-wrapper').css({'height':cw+'px'});
+  jQuery('.post-wrapper').css('height', cw +'px');
   jQuery('.page-builder').css('width', (viewportWidth) +'px')
   jQuery('.page-wrapper').css('height', (viewportHeight) +'px')
   jQuery('.page-builder').css('height', (viewportHeight) +'px')
@@ -182,6 +191,8 @@ function colours(){
       jQuery('.entry-content').eq(9+i).css('background', colour[i])
     }
   }
+
+
 
 
 

@@ -897,13 +897,8 @@ object {
 }
 
 .split-tagline{
+	padding-top: 10px;
 	height: 100%;
-	border: 1px solid grey;	
-
-}
-
-.split-tagline p{
-	
 }
 
 .skylark-header-image{
@@ -992,13 +987,17 @@ p.cloned-event{
 	overflow: auto;
 }
 
+.food-menu{
+	width: 100%;
+}
+
 .post-wrapper{
 /*	min-width: 200px;
 	min-height: 200px;
 	width: 33vw;
 	height: calc(33vw * 1);*/
-	height: 150px;
-	width: 150px;
+	/*height: 150px;*/
+	/*width: 150px;*/
 	background: whitesmoke;
 	display: inline-block;
 	/*float: left;*/
@@ -1024,7 +1023,7 @@ p.cloned-event{
 	left: 20%;
 	right: 20%;
 	width: calc(100% - 40%);
-	margin-bottom: 50px;
+	/*margin-bottom: 50px;*/
 }
 
 .page-builder{
@@ -1071,6 +1070,19 @@ p.cloned-event{
 	/*display: none;*/
 }
 
+.beer-title, .gin-title, .malt-title{
+	width: 100%;
+	text-align: center;
+	position: absolute;
+	top: 35%;
+	color: black;
+	font-size: 1.5em;
+	pointer-events: none;
+}
+
+#cff, .cff-item{
+	border: none;
+}
 /*p {
     display: none;
     background-color: yellow;
@@ -1098,5 +1110,7 @@ div:hover p {
 }
 
 
-
+.food-hide{
+	/*display: none;*/
+}
 
